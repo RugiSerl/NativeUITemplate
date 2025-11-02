@@ -1,0 +1,3 @@
+[submodule "vendor/NativeUI"]
+	path = vendor/NativeUI
+	url = https://github.com/RugiSerl/NativeUI

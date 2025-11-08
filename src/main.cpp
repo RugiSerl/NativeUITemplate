@@ -10,6 +10,7 @@
 #include "PanelTransformable.hpp"
 #include "Theme.hpp"
 #include "NativeUI/Window.hpp"
+#include "CanvasDynamic.hpp"
 
 void test() {
     std::cout << "clicked !" << std::endl;
@@ -36,6 +37,13 @@ int main() {
 
 
     
+    auto *canvas = new UIComponent::CanvasDynamic(
+        Modifier()
+        .setPosition(raylib::Vector2(50, 50))
+        .setSize(raylib::Vector2(300, 200))
+        .setAnchor(Anchor2(Anchor::LEFT, Anchor::TOP)),
+        LayoutType::NONE
+    );
 
     auto *window = new UIComponent::Window(
         "Test",
@@ -104,6 +112,7 @@ int main() {
     root->AddChild(uiComponent2);
     root->AddChild(panel);
     root->AddChild(window);
+    window->AddChild(canvas);
 
 
     while (!w.ShouldClose()) {
@@ -113,6 +122,11 @@ int main() {
         SetCursor(MOUSE_CURSOR_DEFAULT);
         BeginDrawing();
         root->UpdateAndDraw();
+        canvas->Render([canvas] {
+           ClearBackground(GRAY);
+           DrawRectangle(50, 50, 20, 20, RED);
+           DrawCircleV(canvas->GetMouseRelativePosition(), 20, BLACK);
+        });
 
         EndDrawing();
         UpdateCursorState();

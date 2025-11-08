@@ -29,13 +29,13 @@ bin/main.o: src/main.cpp include/raylib-cpp.hpp include/./AudioDevice.hpp \
  include/./Wave.hpp include/./Window.hpp include/NativeUI/Button.hpp \
  include/NativeUI/Panel.hpp include/NativeUI/Component.hpp \
  include/NativeUI/Layout.hpp include/NativeUI/Modifier.hpp \
- include/NativeUI/anchor.hpp include/../include/Vector2.hpp \
- include/../include/raylib-cpp.hpp include/NativeUI/StyleBox.hpp \
- include/NativeUI/Theme.hpp include/NativeUI/cursor.hpp \
- include/NativeUI/utils.hpp include/NativeUI/Component.hpp \
- include/Image.hpp include/NativeUI/Panel.hpp \
- include/NativeUI/PanelTransformable.hpp include/NativeUI/Theme.hpp \
- include/NativeUI/Window.hpp include/NativeUI/PanelTransformable.hpp
+ include/NativeUI/anchor.hpp include/Vector2.hpp \
+ include/NativeUI/StyleBox.hpp include/NativeUI/Theme.hpp \
+ include/NativeUI/cursor.hpp include/NativeUI/utils.hpp \
+ include/NativeUI/Component.hpp include/Image.hpp \
+ include/NativeUI/Panel.hpp include/NativeUI/PanelTransformable.hpp \
+ include/NativeUI/Theme.hpp include/NativeUI/Window.hpp \
+ include/NativeUI/PanelTransformable.hpp
 include/raylib-cpp.hpp:
 include/./AudioDevice.hpp:
 include/././RaylibException.hpp:
@@ -113,8 +113,7 @@ include/NativeUI/Component.hpp:
 include/NativeUI/Layout.hpp:
 include/NativeUI/Modifier.hpp:
 include/NativeUI/anchor.hpp:
-include/../include/Vector2.hpp:
-include/../include/raylib-cpp.hpp:
+include/Vector2.hpp:
 include/NativeUI/StyleBox.hpp:
 include/NativeUI/Theme.hpp:
 include/NativeUI/cursor.hpp:
